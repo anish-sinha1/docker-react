@@ -1,4 +1,5 @@
 sudo: required
+language: generic
 services:
   - docker
 
@@ -6,4 +7,4 @@ before_install:
   - docker build -t anishsinha1/docker-react -f Dockerfile.dev .
 
 script:
-  - docker run anishsinha1/docker-react yarn test --coverage
+  - docker run -e CI=true anishsinha1/docker-react yarn test --coverage
