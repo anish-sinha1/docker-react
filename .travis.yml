@@ -6,4 +6,4 @@ before_install:
   - docker build -t anishsinha1/docker-react -f Dockerfile.dev .
 
 script:
-  - docker run anishsinha1/docker-react yarn test -- --coverage
+  - docker run anishsinha1/docker-react yarn test --coverage
